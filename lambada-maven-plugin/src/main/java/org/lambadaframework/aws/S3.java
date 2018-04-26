@@ -48,7 +48,8 @@ public class S3 extends AWSTools {
             return false;
         }
 
-        getS3Client().createBucket(new CreateBucketRequest(bucket, region));
+        CreateBucketRequest request = (region != null)? new CreateBucketRequest(bucket, region) : new CreateBucketRequest(bucket);
+        getS3Client().createBucket(request);
         return true;
     }
 }

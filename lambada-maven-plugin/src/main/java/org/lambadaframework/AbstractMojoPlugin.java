@@ -23,7 +23,7 @@ public abstract class AbstractMojoPlugin extends AbstractMojo {
      * Specifies the region where the application will be deployed.
      * Should be a valid AWS Region with Lambda and API Gateway support
      */
-    @Parameter(required = true)
+    @Parameter(required = false)
     public String regionToDeploy;
 
     /**
